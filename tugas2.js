@@ -18,7 +18,8 @@ const getMonth = (callback) => {
 async function showMonth(param1, param2){
   try{
     if(param1 === null){
-      console.log(param2.map(p => p))
+      let result = await param2.map(p => p);
+      console.log(result)
     } else {
       console.log(param1.message)
     }
