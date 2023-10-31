@@ -1,3 +1,7 @@
+// Task Javascript Introduction 3
+// Week 2
+// Oct 31, 2023
+
 const cekHariKerja = (day) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
