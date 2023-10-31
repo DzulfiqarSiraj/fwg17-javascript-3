@@ -4,7 +4,7 @@
 
 const getMonth = (callback) => {
   setTimeout(() => {
-    let error = false;
+    let error = true;
     let month = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 
     if (!error){
@@ -15,12 +15,18 @@ const getMonth = (callback) => {
   },4000)
 }
 
-
-let showMonth = (param1, param2) => {
-  if(param1 === null){
+async function showMonth(param1, param2){
+  try{
+    if(param1 === null){
       console.log(param2.map(p => p))
-  } else {
-    console.log(param1.message)
+    } else {
+      console.log(param1.message)
+    }
+  }catch(err){
+    console.log(err)
+  }finally{
+    console.log('End of Program')
   }
 }
+
 getMonth(showMonth)
