@@ -32,6 +32,8 @@ async function getResult(str){
     console.log(`Hari ${result} adalah hari kerja`)
   }catch(error){
     console.log(error.message)
+  }finally{
+    console.log('Program selesai')
   }
 }
 
