@@ -16,20 +16,20 @@ const getMonth = (callback) => {
 }
 
 const showMonth = (err, month) => {
-  if(!err){
-    console.log(month)
-  } else {
+  if(err){
     console.log(err.message)
+  } else {
+    console.log(month.map(data => data))
   }
 }
 
 getMonth(showMonth)
 
 const showData = (err, month) => {
-  if(!err){
-    month.forEach(dat => console.log(dat))
-  } else {
+  if(err){
     console.log(err.message)
+  } else {
+    month.forEach(dat => console.log(dat))
   }
 }
 
