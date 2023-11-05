@@ -2,13 +2,13 @@
 // Week 2
 // Oct 31, 2023
 
-let data = fetch('https://jsonplaceholder.typicode.com/users');
+const data = fetch('https://jsonplaceholder.typicode.com/users');
 
 // handling menggunakan async/await dan mencetak array dengan isi kumpulan string nama
 async function showData(){
     try{
-        let result = await data;
-    let dataName = await result.json()
+    const result = await data;
+    const dataName = await result.json()
     if(dataName.length){
       console.log(dataName.map(d => d.name))
     } else {
