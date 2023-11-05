@@ -8,7 +8,7 @@ const cekHariKerja = (day) => {
 
       const dataDay = ['senin','selasa','rabu','kamis','jumat']
 
-      let cek = dataDay.find((item) => {
+      const cek = dataDay.find((item) => {
         return item === day
       })
 
@@ -32,7 +32,7 @@ cekHariKerja('selasa')
 // b. try catch
 async function getResult(str){
   try{
-    let result = await cekHariKerja(str)
+    const result = await cekHariKerja(str)
     console.log(`Hari ${result} adalah hari kerja`)
   }catch(error){
     console.log(error.message)
